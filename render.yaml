@@ -18,11 +18,15 @@ services:
       - key: SMTP_PASSWORD
         sync: false
 
-  - type: web
+  - type: static
     name: tempmail-frontend
-    env: static
+    env: node
     buildCommand: cd frontend && npm install && npm run build
     staticPublishPath: ./frontend/build
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
     envVars:
       - key: REACT_APP_API_URL
         sync: false 
