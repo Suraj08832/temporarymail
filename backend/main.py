@@ -7,10 +7,10 @@ import random
 import string
 from typing import List, Optional
 
-from .database import SessionLocal, engine
-from . import models, schemas
-from .config import settings
-from .email_server import EmailServer
+from database import SessionLocal, engine
+import models, schemas
+from config import settings
+from email_server import EmailServer
 
 # Create database tables
 models.Base.metadata.create_all(bind=engine)

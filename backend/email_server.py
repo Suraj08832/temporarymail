@@ -6,9 +6,9 @@ from datetime import datetime
 from typing import Optional
 import logging
 
-from .database import SessionLocal
-from . import models, schemas
-from .config import settings
+from database import SessionLocal
+import models, schemas
+from config import settings
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
