@@ -2,9 +2,6 @@ from pydantic_settings import BaseSettings
 from typing import Optional
 
 class Settings(BaseSettings):
-    # Database settings
-    DATABASE_URL: str
-    
     # Email server settings
     SMTP_HOST: str
     SMTP_PORT: int
